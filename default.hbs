@@ -37,6 +37,27 @@
     	$.bigfoot();
     </script>
 
+    {{! TarteAuCitron }}
+    <script type="text/javascript" src="https://cdn.lawgier.net/tarteaucitron/tarteaucitron.js"></script>
+    <script type="text/javascript">
+        tarteaucitron.init({
+            "hashtag": "#tarteaucitron", /* Ouverture automatique du panel avec le hashtag */
+            "highPrivacy": true, /* désactiver le consentement implicite (en naviguant) ? */
+            "orientation": "bottom", /* le bandeau doit être en haut (top) ou en bas (bottom) ? */
+            "adblocker": false, /* Afficher un message si un adblocker est détecté */
+            "showAlertSmall": true, /* afficher le petit bandeau en bas à droite ? */
+            "cookieslist": true, /* Afficher la liste des cookies installés ? */
+            "removeCredit": false, /* supprimer le lien vers la source ? */
+            "handleBrowserDNTRequest": true, /* Deny everything if DNT is on */
+            "cookieDomain": ".lawgier.net" /* Nom de domaine sur lequel sera posé le cookie pour les sous-domaines */
+        });
+    </script>
+    <script type="text/javascript">
+        tarteaucitron.user.typekitId = 'ukh6vgy';
+        (tarteaucitron.job = tarteaucitron.job || []).push('typekit');
+        (tarteaucitron.job = tarteaucitron.job || []).push('youtube');
+        (tarteaucitron.job = tarteaucitron.job || []).push('vimeo');
+    </script>
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
@@ -76,7 +97,8 @@
             });
         });
         function embedVimeo(id, id_width, id_height) {
-            embedCode  = '<iframe webkitallowfullscreen mozallowfullscreen allowfullscreen ' + 'src="https://player.vimeo.com/video/' + id + '?color=ff9933&portrait=0" width="' + id_width + '" height="' + id_height + '" ></iframe>';
+            //embedCode  = '<iframe webkitallowfullscreen mozallowfullscreen allowfullscreen ' + 'src="https://player.vimeo.com/video/' + id + '?color=ff9933&portrait=0" width="' + id_width + '" height="' + id_height + '" ></iframe>';
+            embedCode  = '<div class="vimeo_player"' + 'videoID="' + id + '" width="' + id_width + '" height="' + id_height + '"></div>'
             return embedCode;
         }
         $(document).ready(function() {
@@ -88,7 +110,8 @@
             });
         });
         function embedYT(id, id_width, id_height) {
-            embedCode  = '<iframe width="' + id_width + '" height="' + id_height + '" src="https://www.youtube.com/embed/' + id + '" frameborder="0" allowfullscreen></iframe>';
+            //embedCode  = '<iframe width="' + id_width + '" height="' + id_height + '" src="https://www.youtube.com/embed/' + id + '" frameborder="0" allowfullscreen></iframe>';
+            embedCode  = '<div class="youtube_player" videoID="' + id + '" width="' + id_width + '" height="' + id_height + '" theme="theme (light)" rel="rel (1)" controls="controls (1)" showinfo="showinfo (1)" autoplay="autoplay (0)"></div>'
             return embedCode;
         }
     </script>
