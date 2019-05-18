@@ -20,6 +20,27 @@ http://modularscale.com/
 8:9 major second
 */
 
+:root {
+	--background-color: #fff;
+	--main-text-color: #3a4145;
+	--secondary-text-color: #9eabb3;
+	--link-color: #fc7e0f;
+	
+	--table-border-color: #efefef;
+	--th-background-color: #f6f6f6;
+	
+	--font-size-minus-3: 0.702rem;
+	--font-size-minus-2: 0.79rem;
+	--font-size-minus-1: 0.889rem;
+	--font-size-plus-1: 1.125rem;
+	--font-size-plus-2: 1.266rem;
+	--font-size-plus-3: 1.424rem;
+	--font-size-plus-4: 1.602rem;
+	--font-size-plus-5: 1.802rem;
+	--font-size-plus-6: 2.281rem;
+	--font-size-plus-7: 2.887rem;
+}
+
 html {
     height: 100%;
     max-height: 100%;
@@ -42,7 +63,8 @@ body {
 	font-weight: 300;
     font-size: 1rem;
     line-height: 1.7;
-    color: #3A4145;
+    color: var(--main-text-color);
+    background-color: var(--background-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -52,23 +74,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 1.802rem;
+	font-size: var(--font-size-plus-5);
 }
 
 h2 {
-	font-size: 1.602rem;
+	font-size: var(--font-size-plus-4);
 }
 
 h3 {
-	font-size: 1.424rem;
+	font-size: var(--font-size-plus-3);
 }
 
 h4 {
-	font-size: 1.266rem;
+	font-size: var(--font-size-plus-2);
 }
 
 h5 {
-	font-size: 1.125rem;
+	font-size: var(--font-size-plus-1);
 }
 
 h6 {
@@ -82,7 +104,7 @@ p {
 code, tt, pre {
     font-family: "Source Code Pro", monospace, sans-serif;
     white-space: pre-wrap;
-    font-size: 0.79rem;
+    font-size: var(--font-size-minus-2);
     border: none;
     background: none;
 }
@@ -102,7 +124,7 @@ pre code {
 
 blockquote {
 	margin: 0 2em;
-	color: #9EABB3;
+	color: var(--secondary-text-color);
 }
 
 blockquote p {
@@ -112,19 +134,19 @@ blockquote p {
 
 blockquote cite {
 	font-style: normal;
-	font-size: 0.889rem;
+	font-size: var(--font-size-minus-1)
 }
 
 hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: #9EABB3 1px solid;
+    border-top: var(--secondary-text-color) 1px solid;
 }
 
 /* Links */
 .post a {
-    color: #FC7E0F;
+    color: var(--link-color);
     text-decoration: none;
 }
 
@@ -132,23 +154,18 @@ hr {
     text-decoration: underline;
 }
 
-.post a:visited {
-    color: #9EABB3;
-    text-decoration: none;
-}
-
 a.read-more, a.read-more:hover, a.read-more:visited {
-    color: #FC7E0F;	/* #DA1F15, #F17F33 */
+    color: var(--link-color);
     text-decoration: none;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-	color: #3A4145;
+	color: var(--main-text-color);
 	text-decoration: none;
 }
 
 .post-title a {
-	color: #3A4145 !important;
+	color: var(--main-text-color) !important;
 	text-decoration: none !important;
 }
 
@@ -168,7 +185,7 @@ th, td {
     line-height: 20px;
     text-align: left;
     vertical-align: top;
-    border-top: #EFEFEF 1px solid;
+    border-top: var(--table-border-color) 1px solid;
 }
 
 td h3, td h4, td h5, td h6 {
@@ -184,13 +201,12 @@ table thead:first-child tr:first-child td {
     border-top: 0;
 }
 
-table tbody + tbody { border-top: #EFEFEF 2px solid; }
+table tbody + tbody { border-top: var(--table-border-color) 2px solid; }
 
-table table table { background-color: #FFF; }
+table table table { background-color: var(--background-color); }
 
 th {
-	color: #000;
-    background-color: #F6F6F6;
+    background-color: var(--th-background-color);
 }
 
 dl dt {
@@ -234,7 +250,7 @@ dl dd {
     padding: 0;
     font-family: "Lato", sans-serif;
 	font-weight: 300;
-    font-size: 2.887rem;
+    font-size: var(--font-size-plus-7);
     vertical-align: middle;
     line-height: 1;
 }
@@ -245,11 +261,12 @@ dl dd {
 
 .blog-description {
     margin: 0;
-    font-size: 0.889rem;
+    font-size: var(--font-size-minus-1);
     font-family: "Lato", sans-serif;
     text-transform: uppercase;
     letter-spacing: 0;
-    color: #cccccc;
+    color: var(--secondary-text-color);
+    font-weight: 300;
 }
 
 /*	==========================================================================
@@ -267,20 +284,20 @@ dl dd {
 
 .nav a {
 	margin: 0 0.5rem;
-	color: #9EABB3;
+	color: var(--secondary-text-color);
 	text-decoration: none;
 }
 
 .nav a:hover {
-	color: #FC7E0F;
+	color: var(--link-color);
 }
 
 a.nav-current {
-	color: #FC7E0F;
+	color: var(--link-color);
 }
 
-a.nav-home {
-	color: #9EABB3;
+a.nav-home, a.nav-blog {
+	color: var(--secondary-text-color);
 }
 
 /*	==========================================================================
@@ -299,12 +316,12 @@ a.nav-home {
 }
 
 .site-footer a {
-	color: #FC7E0F;
+	color: var(--link-color);
 	text-decoration: none;
 }
 
 .site-footer a:hover {
-	color: #9EABB3;
+	color: var(--secondary-text-color);
 }
 
 
@@ -324,13 +341,13 @@ a.nav-home {
 	margin-left: -.2rem;
 	padding: .35rem .1rem 0.05rem .2rem;
 	vertical-align: middle;
-	border: 1px #FC7E0F solid;
+	border: 1px var(--link-color) solid;
 	border-radius: 1.2rem;
 }
 
 .site-footer .rss a:hover {
-	color: #ffffff;
-	background: #FC7E0F;
+	color: var(--background-color);
+	background: var(--link-color);
 }
 */
 
@@ -358,6 +375,7 @@ a.nav-home {
 .post-meta {
 	text-transform: uppercase;
 	font-size: .79rem;
+	color: var(--secondary-text-color);
 }
 
 .post-footer {
@@ -365,37 +383,93 @@ a.nav-home {
 }
 
 .post-footer .tags a {
-	color: #9EABB3;
+	color: var(--secondary-text-color);
 	text-decoration: none;
 }
 
 .post-footer .tags a:hover {
-	color: #FC7E0F;
+	color: var(--link-color);
 }
 
 .post-footer h4 {
 	margin: 2rem 0 0;
 }
 
-.post-footer .share {
-    margin: 0 auto;
-}
-
-.post-footer .share a {
-    font-size: 1.8rem;
-    display: inline-block;
-    margin: 1rem 1.6rem 1.6rem 0;
-    color: #BBC7CC;
-    text-decoration: none;
-}
-
-.post-footer .share a:hover {
-    color: #50585D;
-}
-
 .post img {
+	display: block;
 	max-width: 100%;	/* Keep image contained in width of post */
+	margin: 0 auto 0.5rem;
+}
+
+.footnotes-sep {
+	display: none;
+}
+
+/* Koenig image styles */
+
+.kg-image-card {
+	margin-bottom: 0.5rem;
+}
+
+.kg-image-card img {
+	margin-bottom: 0;
+}
+
+.post .kg-image-wide {
+	max-width: 1050px;
+	margin: 0 -200px;
+}
+
+@media (max-width: 1100px) {
+	.post .kg-image-wide {
+		max-width: 140%;
+		margin: 0 -20%;
 	}
+}
+
+@media (max-width: 950px) {
+	.post .kg-image-wide {
+		max-width: 120%;		/* Start calculating as percentage of viewport? */
+		margin: 0 -10%;
+	}
+}
+
+.post .kg-image-full {
+	max-width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+}
+
+.kg-image-card figcaption {
+	font-size: var(--font-size-minus-2);
+	text-align: center;
+}
+
+
+/* YouTube embed wrapper to scale to full-width */
+
+.yt-wrapper {
+	position: relative;
+	width: 100%;
+	margin: 0;
+}
+
+.yt-wrapper:before{
+	content: "";
+	display: block;
+	padding-top: 56.25%;	/* 16:9 aspect ratio */
+}
+
+.yt-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
 
 /*	==========================================================================
 	Tags
@@ -403,7 +477,7 @@ a.nav-home {
 
 .tag-title {
     font-family: "Lato", sans-serif;
-    font-size: 1.802rem;
+    font-size: var(--font-size-plus-5);
 	font-weight: bold;
 	margin-top: 0;
 }
@@ -413,7 +487,7 @@ a.nav-home {
 }
 
 .tag-description {
-	color: #9EABB3;
+	color: var(--secondary-text-color);
 }
 
 /* ==========================================================================
@@ -425,12 +499,12 @@ a.nav-home {
     position: relative;
     margin: 2rem auto;
     font-size: .79rem;
-    color: #9EABB3;
+    color: var(--secondary-text-color);
     text-align: center;
 }
 
 .pagination a {
-    color: #9EABB3;
+    color: var(--secondary-text-color);
 }
 
 /* Push the previous/next links out to the left/right */
@@ -457,7 +531,7 @@ a.nav-home {
 
 .older-posts:hover,
 .newer-posts:hover {
-    color: #FC7E0F;
+    color: var(--link-color);
 }
 
 .extra-pagination {
@@ -474,20 +548,33 @@ a.nav-home {
 }
 
 /* ==========================================================================
-   12. Media Queries - Smaller than 500px
+   12. Media Queries
    ========================================================================== */
 
 @media only screen and (max-width: 500px) {
 
 	html {
-		font-size: 100%;
+		font-size: 100%; /* Reduce from 112.5% */
 	}
 
    .blog-title {
-		font-size: 2.281rem;
+		font-size: var(--font-size-plus-6);
 	}
 	
 	.blog-description {
-	   font-size: 0.889rem;
+	   font-size: var(--font-size-minus-1);
+	}
+}
+
+/* 🌑 DARK MODE 🌑 */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background-color: #101213;
+		--main-text-color: #e7e9ea;
+		--secondary-text-color: #6e787f;
+		--link-color: #f65f09;
+	
+		--table-border-color: #212528;
+		--th-background-color: #1e2124;
 	}
 }
