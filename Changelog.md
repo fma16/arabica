@@ -41,4 +41,16 @@ Added file: `partials\navigation.hbs`
 ## 2.1 - Jun 25, 2018
 - Added Koenig editor support – new image classes and captions
 - Behavior of "Home" or "Blog" nav links are now the same – gray when current, only orange on hover
+<<<<<<< HEAD
 - Images less than the width of a post are now centered
+=======
+- Images less than the width of a post are now centered
+
+## 2.2 - Nov 3, 2018
+- Dark mode (triggered by `prefers-color-scheme: dark` media query)
+- Removed Bigfoot folder, keeping just the files actually used
+
+## 2.2.1 - March 22, 2019
+- Removed visited link style
+
+>>>>>>> 932f3b1e20b7290517a8cc9b11aff26e5fe6d5ca

@@ -2,7 +2,11 @@
 	"name": "arabica",
 	"description": "A smooth, minimal Ghost theme",
 	"homepage": "https://thedarkroast.com/arabica/",
+<<<<<<< HEAD
 	"version": "2.1.0",
+=======
+	"version": "2.2.1",
+>>>>>>> 932f3b1e20b7290517a8cc9b11aff26e5fe6d5ca
 	"engines": {
 		"ghost": ">=1.0.0"
 	},
@@ -25,5 +29,20 @@
 			"Minimal",
 			"Personal Blogs"
 		]
+<<<<<<< HEAD
 	}
 }
+=======
+	},
+    "keywords": [
+        "ghost",
+        "theme",
+        "ghost-theme"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/slunsford/arabica.git"
+    },
+    "bugs": "https://github.com/slunsford/arabica/issues"
+}
+>>>>>>> 932f3b1e20b7290517a8cc9b11aff26e5fe6d5ca

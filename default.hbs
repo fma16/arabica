@@ -9,6 +9,7 @@
     <title>{{meta_title}}</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
         
     <link rel="shortcut icon" href="https://cdn.lawgier.net/assets/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="https://cdn.lawgier.net/assets/apple-touch-icon.png" />
@@ -33,6 +34,19 @@
     <script async src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script async type="text/javascript" src="https://cdn.lawgier.net/assets/bigfoot.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.lawgier.net/assets/bigfoot-number.min.css" />
+=======
+
+    {{! Styles and Fonts }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/normalize.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/icons.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Lato:100,100i,300,300i,400,400i,700,700i|Source+Code+Pro:300,400,500,700" rel="stylesheet">
+    
+    {{! Bigfoot - popover footnotes }}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="{{asset "js/bigfoot.js"}}"></script>
+    <link rel="stylesheet" type="text/css" href="{{asset "css/bigfoot-number.css"}}" />
+>>>>>>> 932f3b1e20b7290517a8cc9b11aff26e5fe6d5ca
     <script type="text/javascript">
     	$.bigfoot();
     </script>
